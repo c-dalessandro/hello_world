@@ -27,12 +27,10 @@
 	</dependencies>
 
 	<distributionManagement>
-		<!-- Publish the versioned releases here -->
 		<repository>
 			<id>nexus_releases</id>
 			<url>http://localhost:8081/repository/noipa-releases-repository/</url>
 		</repository>
-		<!-- Publish the versioned snapshot here -->
 		<snapshotRepository>
 			<id>nexus_snapshots</id>
 			<url>http://localhost:8081/repository/noipa-snapshots-repository/</url>
@@ -44,6 +42,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.10.0.2594</version>
 			</plugin>
 		</plugins>
 	</build>
